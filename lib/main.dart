@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      
       routerConfig: GoRouter(routes: [
         GoRoute(path: "/",builder: (context, state) => AzulPage(),),
         GoRoute(path: "/verde",builder: (context, state) => VerdePage(),),

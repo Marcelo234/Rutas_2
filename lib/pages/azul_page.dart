@@ -17,6 +17,12 @@ class AzulPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            CircleAvatar(
+              radius: 100.0,
+              backgroundColor: Colors.green,
+              backgroundImage: AssetImage('images/avatar1.png'),
+            ),
+            SizedBox(height: 20),
             Text(
               'LOGIN',
               style: TextStyle(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'azul_page.dart';
 import 'rojo_page.dart';
 class VerdePage extends StatelessWidget {
   @override
@@ -8,23 +9,22 @@ class VerdePage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
+            UserAccountsDrawerHeader(
+              accountName: Text('Marcelo Ontaneda'),
+              accountEmail: Text('marcelo@gmail.com'),
+              currentAccountPicture: Image.asset('images/avatar1.png'),
               decoration: BoxDecoration(
                 color: Colors.blue,
-              ),
-              child: Text(
-                'Menú',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
               ),
             ),
             ListTile(
               leading: Icon(Icons.home),
               title: Text('Inicio'),
               onTap: () {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AzulPage()),
+                );
               },
             ),
             ListTile(
@@ -39,6 +39,16 @@ class VerdePage extends StatelessWidget {
               title: Text('Perfil'),
               onTap: () {
                 
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.upload_file),
+              title: Text('Subir archivo'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RojoPage()),
+                );
               },
             ),
           ],
