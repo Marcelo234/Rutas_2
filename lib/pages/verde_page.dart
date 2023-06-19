@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'azul_page.dart';
+import 'qr_code.dart';
 import 'rojo_page.dart';
 class VerdePage extends StatelessWidget {
   @override
@@ -48,6 +49,16 @@ class VerdePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => RojoPage()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.qr_code_2),
+              title: Text('Codigo QR'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PageCode()),
                 );
               },
             ),
